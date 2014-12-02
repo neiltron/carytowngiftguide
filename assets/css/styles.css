@@ -1,0 +1,68 @@
+
+
+
+#container{
+	width:450px;
+	height:300px;
+	padding:10px;
+	text-align:center;
+	margin:0 auto;
+	position:relative;
+	background-color:#fff;
+	display:block;
+	
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+#container:before,
+#container:after{
+	
+	/* Adding subtle shadows with before/after elements */
+	
+	content:'.';
+	text-indent:-99999px;
+	overflow:hidden;
+	display:block;
+	height:12px;
+	width:470px;
+	background:url('../img/shadows.png') no-repeat center top;
+	position:absolute;
+	left:0;
+	top:-12px;
+}
+
+#container:after{
+	top:auto;
+	bottom:-12px;
+	background-position:center bottom;
+}
+
+
+
+/*----------------------------
+	Download Button
+-----------------------------*/
+
+
+a.downloadButton{
+	margin-top:20px;
+	display:inline-block;
+	width:10em;
+	height:2.5em;
+	padding-top:1.5em;
+	background-color:#fff;
+	color:#333;
+	border-radius:10px;
+	overflow:hidden;
+	background:;
+	cursor:default;
+	border:none;
+	
+}
+
+a.downloadButton.active{
+	background-position:left bottom;
+	cursor:pointer;
+}

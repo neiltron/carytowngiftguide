@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Carytown Bicycle Co. | Holiday Gift Guide</title>
+	<meta name="author" content="Carytown Bicycle Co." />
+	<meta name="description" content="Carytown Bicycle Co." />
+	<meta name="keywords"  content="" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link rel="stylesheet" href="assets/css/styles.css" />
+
+
+	<style>
+
+		/* Sections
+		 * --------------------------------------- */
+		#section0 img,
+		#section1 img{
+			margin: 0;
+		}
+		#section2 img{
+			margin: 0px 0 0 0;
+		}
+		#section3 img{
+			margin: 0px 0 0 0;
+
+		}
+		.intro p{
+
+			width: 50%;
+			margin: 0 auto;
+
+		}
+		.twitter-share-button{
+			position: absolute;
+			z-index: 99;
+			right: 149px;
+			top: 9px;
+		}
+		img {
+			opacity:.5;
+
+		}
+		.sharebutton {
+			position: absolute;
+			z-index: 10000;
+			right: 15px;
+			top: 15px;
+			color:#000;
+			background:#fff;
+			border-radius:25px;
+			padding:15px;
+			opacity:.5;
+
+		}
+				.emailbutton {
+			
+			z-index: 9999;
+			color:#fff;
+			font-size:14px;
+			background:#555;
+			border-radius:25px;
+			padding:15px;
+			border:none;
+			width:250px;
+			margin-top:20px;
+
+		}
+		.socialbuttontw {
+
+			z-index: 9999;
+			color:#fff;
+			background:#4099ff;
+			border-radius:25px;
+			padding:15px;
+			
+
+		}
+		.socialbuttonfb {
+
+			z-index: 9999;
+			color:#fff;
+			background:#3B5998;
+			border-radius:25px;
+			padding:15px;
+			
+
+		}
+		#share {
+
+			color:#fff;
+		}
+
+		.emailform {
+			
+			padding:8px;
+			border-radius:8px;
+			border:none;
+			margin-bottom:15px;
+			height:25px;
+			width:250px;
+			font-size:14px;
+		}
+
+	#first, #section1, #section2, #section3, #section4, #section5, #share {background:url('image/bg.png');background-repeat: repeat;}
+
+	#menu {
+		position:absolute;
+		bottom:10px;
+	}
+	.wishlist {
+		color:#fff;
+
+	}
+	.nextlink {
+			z-index: 9999;
+			color:#fff;
+			font-size:14px;
+			background:#555;
+			border-radius:25px;
+			padding:15px;
+			border:none;
+			width:250px;
+			margin-top:20px;
+	}
+
+
+		
+
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#9FDE5F','#19BBB7' ,'#EF4D36'],
+				anchors: ['section0', 'firstPage', 'share'],
+				menu: '#menu'
+			});
+
+		});
+	</script>
+</head>
+<body>
+
+
+
+
+<ul id="menu">
+	
+		<li data-menuanchor="section0" ><a  href="#section0">Create Wishlist</a></li>
+	<li data-menuanchor="firstPage"><a href="#firstPage">Send Wishlist</a></li>
+
+
+</ul>
+<div data-menuanchor="share"><a href="#share" class="sharebutton">Share This</a></div>
+
+<div id="fullpage">
+	<div class="section" id="section1">
+
+
+	<h1>Create Your Wishlist</h1>
+        	<p class="wishlist">Shopping for a cyclist is not an easy task. We've made it easy to help out your friends and family by creating your own personal wishlist. Add up to five items to your wishlist. Make sure to include stocking stuffers as well as that big item you hope to see under the tree. Once done, our elves will help dispatch your items to the right people.<br/><br/><br/>
+        	
+        	<form>
+        	<input class="emailform" name="Item" value="1." type="text"><br/>
+        	<input class="emailform" name="Item" value="2." type="text"><br/>
+        	<input class="emailform" name="Item" value="3." type="text"><br/>
+        	<input class="emailform" name="Item" value="4." type="text"><br/>
+        	<input class="emailform" name="Item" value="5." type="text"><br/>
+        	<br/>
+        	<a class="nextlink" href="#firstPage">Next Step</a>
+			
+			</form>
+
+
+	</div>
+
+	
+
+
+
+	<div class="section" id="share">
+
+
+
+
+
+
+        <div >
+        	<h1>Share and Send Your Wishlist</h1>
+        	<p>Add up to three emails and we will have our elves will dispatch your wishlist to the right people.<br/><br/><br/>
+        	
+        	<form>
+        	<input class="emailform" name="Email" value="Email" type="text"><br/>
+        	<input class="emailform" name="Email" value="Email" type="text"><br/>
+        	<input class="emailform" name="Email" value="Email" type="text"><br/>
+        	<input class="emailbutton" name="Email" value="Submit" type="submit"><br/>
+			</form>
+        	
+
+
+
+
+        
+
+        </section>
+
+    	</div>
+
+
+
+	</div>
+
+	<div class="section" id="share">
+
+
+
+
+
+
+        <div class="intro">
+        	<h1>Share This</h1>
+        	
+			<p>
+        	Trying to get a few hints for your shopping list? Share the wishlist with those who have been nice this season and they can help guide you to the right present.</p><br/>
+
+        	<br/>
+
+
+
+
+        	<a href="http://www.facebook.com/sharer/sharer.php?u=www.carytownbikes.com/wishlist" target="_blank" id="fbPostLink" class="socialbuttonfb">Share on Facebook</a> 
+
+        	<a class="socialbuttontw" target="_blank" href="http://twitter.com/share?url=http://carytownbikes.com/wishlist&text=Fill out your wishlist with Carytown Bikes!">Share on Twitter</a>
+
+        </section>
+
+    	</div>
+
+
+
+	</div>
+
+</div>
+
+<script type='text/javascript' src="assets/js/jquery.tweetAction.js"></script>
+    <script type='text/javascript' src="assets/js/script.js"></script>
+
+</body>
+</html>
