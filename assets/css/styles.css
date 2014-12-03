@@ -10,7 +10,7 @@
 	position:relative;
 	background-color:#fff;
 	display:block;
-	
+
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
@@ -18,9 +18,9 @@
 
 #container:before,
 #container:after{
-	
+
 	/* Adding subtle shadows with before/after elements */
-	
+
 	content:'.';
 	text-indent:-99999px;
 	overflow:hidden;
@@ -59,10 +59,28 @@ a.downloadButton{
 	background:;
 	cursor:default;
 	border:none;
-	
+
 }
 
 a.downloadButton.active{
 	background-position:left bottom;
 	cursor:pointer;
+}
+
+
+
+@media (min-width: 420px) {
+	body h1, body p, #menu h2, .sharebutton, body .socialbutton {
+		font-weight: 300;
+		font-size: 2em;
+	}
+
+	body #menu li a {
+		font-size: 1.6em;
+		font-weight: 300;
+	}
+
+	body h1 {
+		font-size: 3em;
+	}
 }
