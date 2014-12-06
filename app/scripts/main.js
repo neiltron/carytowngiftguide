@@ -5,7 +5,7 @@ $(document).ready(function() {
     sectionSelector: 'section',
     resize : false,
     sectionsColor: ['#7dae37','#EFAF2E', '#19BBB7', '#9FDE5F', '#0394D1', '#EF4D36','#555'],
-    anchors: ['section0', 'student', 'friend', 'casual', 'family', 'racer', 'share'],
+    anchors: ['start', 'student', 'friend', 'casual', 'family', 'racer', 'share'],
     menu: '#menu'
   });
 
