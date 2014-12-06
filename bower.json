@@ -1,33 +1,10 @@
 {
-  "name": "fullpage.js",
-  "version": "2.4.3",
-  "homepage": "http://alvarotrigo.com/fullPage/",
-  "authors": [
-    "Alvaro Trigo https://github.com/alvarotrigo"
-  ],
-  "description": "Create  beautiful fullscreen scrolling websites",
-  "main": [
-    "jquery.fullPage.js",
-    "jquery.fullPage.css"
-  ],
-  "keywords": [
-    "jquery",
-    "scrolling",
-    "single_page",
-    "one_page",
-    "sliding"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
-    "examples"
-  ],
+  "name": "giftguide",
+  "private": true,
   "dependencies": {
-      "jquery.slimscroll": "latest",
-      "jquery": "latest"
-    }
+    "jquery": "~1.11.1",
+    "bourbon": "3.2.3",
+    "fullpage.js": "~2.5.1",
+    "neat": "~1.7.0"
+  }
 }

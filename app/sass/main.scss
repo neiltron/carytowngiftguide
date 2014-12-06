@@ -1,0 +1,179 @@
+@import 'bourbon';
+@import 'base/base';
+@import 'neat';
+
+body {
+  background: #fafafa;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-weight: 200;
+  font-size: 1.05em;
+  color: #333;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+section {
+  text-align: center;
+  background: url('../images/bg.png');
+  background-repeat: repeat;
+
+  img.icon {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+
+    @include media($medium-screen) {
+      max-width: 250px;
+    }
+  }
+
+  &#first {
+    .icon {
+      margin-bottom: 60px;
+    }
+  }
+
+  h1 {
+    font-weight: 200;
+    letter-spacing: -2px;
+    font-size: 2em;
+    color: #fff;
+  }
+
+  p {
+    @include span-columns(10);
+    @include shift(1);
+
+    @include media($medium-screen) {
+      @include span-columns(6);
+      @include shift(3);
+      @include omega;
+    }
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .navigate {
+    @include span-columns(12);
+  }
+}
+
+#menu{
+  text-align:center;
+  position:fixed;
+  top:90%;
+  left:0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin:0;
+
+  h2 {
+    margin-bottom:20px;
+    margin-top:20px;
+    color:#fff;
+  }
+
+  li {
+    display:inline-block;
+    margin: 10px;
+    color: #000;
+    opacity:.75;
+    background:#fff;
+    background: rgba(255,255,255, 0.5);
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+
+    .active{
+      background:#666;
+      background: rgba(0,0,0, 0.5);
+      color: #fff;
+    }
+
+    a {
+      text-decoration:none;
+      color: #000;
+      padding: 9px 18px;
+      display:block;
+    }
+
+    &:hover{
+      background: rgba(255,255,255, 0.8);
+    }
+
+    &.active {
+      background: #666;
+      background: rgba(0,0,0, 0.5);
+      color: #fff;
+
+      a:hover{
+        color: #000;
+      }
+
+      a {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+img {
+  opacity: 0.5;
+}
+
+.sharebutton {
+  position: absolute;
+  z-index: 9999;
+  right: 15px;
+  top: 15px;
+  color:#000;
+  background:#fff;
+  border-radius:25px;
+  padding:15px;
+  opacity:.5;
+}
+
+.fp-controlArrow {
+    opacity:.75;
+    border-width: 25px 0 25px 25px;
+    border-color: transparent transparent transparent #fff;
+
+    &.fp-prev {
+      display: none;
+    }
+}
+
+#redeem-instructions {
+  color: #fff;
+  display: none;
+}
+
+.socialbutton {
+  position: relative;
+  top: 2em;
+  font-weight: 400;
+
+  &.twitter {
+    z-index: 9999;
+    color:#fff;
+    background:#4099ff;
+    border-radius:25px;
+    padding:15px;
+  }
+
+  &.facebook {
+    z-index: 9999;
+    color:#fff;
+    background:#3B5998;
+    border-radius:25px;
+    padding:15px;
+  }
+}
