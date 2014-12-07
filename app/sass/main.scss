@@ -43,6 +43,7 @@ section {
 
   img {
     height: 50px;
+    opacity: 0.5;
 
     @include media($medium-screen) {
       height: auto;
@@ -67,41 +68,6 @@ section {
       margin-bottom: 0px;
       margin-top: 0px;
       height: 70px;
-    }
-  }
-
-  &#first {
-
-    @include iphone5 {
-      h1 {
-        font-size: 2.05em;
-      }
-    }
-
-    .icon {
-      margin-bottom: 10px;
-      height: 60px;
-
-      @include media($medium-screen) {
-        margin-bottom: 60px;
-        height: 150px;
-      }
-
-      @include iphone6(landscape) {
-        height: 60px;
-        margin-bottom: 10px;
-      }
-    }
-
-    p {
-      @include iphone6(landscape) {
-        margin-bottom: 1em;
-      }
-    }
-
-    .navigate {
-      margin-top: 0;
-      padding-bottom: 6em;
     }
   }
 
@@ -149,6 +115,12 @@ section {
       margin-top: 0;
       margin-bottom: 2em;
     }
+
+    img {
+      opacity: 1;
+      width: auto;
+      height: auto;
+    }
   }
 
   .slide:first-child {
@@ -157,6 +129,46 @@ section {
         @include span-columns(8);
         @include shift(2);
       }
+    }
+  }
+
+  &#first {
+
+    @include iphone5 {
+      h1 {
+        font-size: 2.05em;
+      }
+    }
+
+    .icon {
+      margin-bottom: 10px;
+      height: 60px;
+
+      @include media($medium-screen) {
+        margin-bottom: 60px;
+        height: 150px;
+      }
+
+      @include iphone6(landscape) {
+        height: 60px;
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      @include media($medium-screen) {
+        @include span-columns(11);
+        @include shift(.5);
+      }
+
+      @include iphone6(landscape) {
+        margin-bottom: 1em;
+      }
+    }
+
+    .navigate {
+      margin-top: 0;
+      padding-bottom: 6em;
     }
   }
 }
@@ -239,10 +251,6 @@ section {
       }
     }
   }
-}
-
-img {
-  opacity: 0.5;
 }
 
 .sharebutton {

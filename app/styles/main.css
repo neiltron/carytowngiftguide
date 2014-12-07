@@ -268,7 +268,8 @@ section {
   background: url("../images/bg.png");
   background-repeat: repeat; }
   section img {
-    height: 50px; }
+    height: 50px;
+    opacity: 0.5; }
     @media screen and (min-width: 40em) {
       section img {
         height: auto; } }
@@ -288,26 +289,6 @@ section {
         margin-bottom: 0px;
         margin-top: 0px;
         height: 70px; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
-    section#first h1 {
-      font-size: 2.05em; } }
-  section#first .icon {
-    margin-bottom: 10px;
-    height: 60px; }
-    @media screen and (min-width: 40em) {
-      section#first .icon {
-        margin-bottom: 60px;
-        height: 150px; } }
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
-      section#first .icon {
-        height: 60px;
-        margin-bottom: 10px; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
-    section#first p {
-      margin-bottom: 1em; } }
-  section#first .navigate {
-    margin-top: 0;
-    padding-bottom: 6em; }
   section h1 {
     font-weight: 100;
     color: #fff; }
@@ -359,6 +340,10 @@ section {
       section .navigate {
         margin-top: 0;
         margin-bottom: 2em; } }
+    section .navigate img {
+      opacity: 1;
+      width: auto;
+      height: auto; }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
     section .slide:first-child p {
       float: left;
@@ -368,6 +353,35 @@ section {
       margin-left: 17.05961%; }
       section .slide:first-child p:last-child {
         margin-right: 0; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
+    section#first h1 {
+      font-size: 2.05em; } }
+  section#first .icon {
+    margin-bottom: 10px;
+    height: 60px; }
+    @media screen and (min-width: 40em) {
+      section#first .icon {
+        margin-bottom: 60px;
+        height: 150px; } }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+      section#first .icon {
+        height: 60px;
+        margin-bottom: 10px; } }
+  @media screen and (min-width: 40em) {
+    section#first p {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 91.4702%;
+      margin-left: 4.2649%; }
+      section#first p:last-child {
+        margin-right: 0; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+    section#first p {
+      margin-bottom: 1em; } }
+  section#first .navigate {
+    margin-top: 0;
+    padding-bottom: 6em; }
 
 #menu {
   text-align: center;
@@ -426,9 +440,6 @@ section {
       #menu li.active a {
         color: #fff;
         font-weight: 400; }
-
-img {
-  opacity: 0.5; }
 
 .sharebutton {
   position: absolute;
