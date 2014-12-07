@@ -66,7 +66,7 @@ section {
 
     @include iphone6(landscape) {
       margin-bottom: 0px;
-      margin-top: 0px;
+      margin-top: -2.5em;
       height: 70px;
     }
   }
@@ -75,6 +75,10 @@ section {
     font-weight: 100;
 
     color: #fff;
+
+    @include iphone6(landscape) {
+      font-size: 1.8em;
+    }
   }
 
   p {
@@ -88,17 +92,21 @@ section {
       @include span-columns(6);
       @include shift(3);
       @include omega;
+
+      font-size: 1.35em;
     }
 
     @include iphone6 {
-      @include span-columns(11);
-      @include shift(.5);
+      @include span-columns(10);
+      @include shift(1);
 
       font-size: 1.35em;
     }
 
     @include iphone6(landscape) {
       font-size: 1em;
+
+      margin-top: 0;
     }
 
     @include iphone5 {
@@ -156,7 +164,7 @@ section {
     }
 
     p {
-      @include media($medium-screen) {
+      @include iphone6 {
         @include span-columns(11);
         @include shift(.5);
       }
