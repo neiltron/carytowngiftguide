@@ -1,6 +1,7 @@
 'use strict';
 
 $(document).ready(function() {
+  // Fullpage.js
   $('#fullpage').fullpage({
     sectionSelector: 'section',
     resize : false,
@@ -9,6 +10,11 @@ $(document).ready(function() {
     menu: '#menu'
   });
 
+
+  // Fastclick
+  FastClick.attach(document.body);
+
+  // social popups/$5 off instructions
   $('.socialbutton').bind('click', function (e) {
     e.preventDefault();
 

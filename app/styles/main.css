@@ -238,15 +238,24 @@ html {
 body {
   background: #fafafa;
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
-  font-weight: 200;
-  font-size: 0.8em;
-  color: #333; }
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-weight: 100;
+  font-size: 0.9em;
+  color: #000; }
   @media screen and (min-width: 40em) {
     body {
       font-size: 1.05em; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) and (orientation: landscape) {
     body {
-      font-size: 0.8em; } }
+      font-size: 0.9em; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
+    body {
+      -webkit-font-smoothing: antialiased;
+      font-weight: 200; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+    body {
+      -webkit-font-smoothing: antialiased;
+      font-weight: 200; } }
 
 .browsehappy {
   margin: 0.2em 0;
@@ -268,17 +277,20 @@ section {
         height: 50px; } }
   section img.icon {
     display: block;
-    margin: 0 auto;
+    margin: 1em auto;
     height: 80px; }
     @media screen and (min-width: 40em) {
       section img.icon {
-        margin-bottom: 60px;
+        margin-bottom: 0em;
         height: 150px; } }
     @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
       section img.icon {
         margin-bottom: 0px;
-        margin-topssa: 0px;
+        margin-top: 0px;
         height: 70px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
+    section#first h1 {
+      font-size: 2.05em; } }
   section#first .icon {
     margin-bottom: 10px;
     height: 60px; }
@@ -286,13 +298,18 @@ section {
       section#first .icon {
         margin-bottom: 60px;
         height: 150px; } }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+      section#first .icon {
+        height: 60px;
+        margin-bottom: 10px; } }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
     section#first p {
-      margin-bottom: 10px;
-      margin-top: 5px; } }
+      margin-bottom: 1em; } }
+  section#first .navigate {
+    margin-top: 0;
+    padding-bottom: 6em; }
   section h1 {
-    font-weight: 200;
-    letter-spacing: -2px;
+    font-weight: 100;
     color: #fff; }
   section p {
     float: left;
@@ -319,17 +336,38 @@ section {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 82.94039%;
-        margin-left: 8.5298%; }
+        width: 91.4702%;
+        margin-left: 4.2649%;
+        font-size: 1.35em; }
         section p:last-child {
           margin-right: 0; } }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+      section p {
+        font-size: 1em; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
+      section p {
+        font-size: 1.15em; } }
   section .navigate {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 100%;
+    margin-top: 2em; }
     section .navigate:last-child {
       margin-right: 0; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+      section .navigate {
+        margin-top: 0;
+        margin-bottom: 2em; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+    section .slide:first-child p {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      section .slide:first-child p:last-child {
+        margin-right: 0; } }
 
 #menu {
   text-align: center;
@@ -362,6 +400,12 @@ section {
     @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
       #menu li {
         margin: .3em; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
+      #menu li {
+        font-size: .95em; } }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+      #menu li {
+        font-size: .9em; } }
     #menu li .active {
       background: #666;
       background: rgba(0, 0, 0, 0.5);
@@ -378,17 +422,16 @@ section {
       background: rgba(0, 0, 0, 0.5);
       color: #fff; }
       #menu li.active a:hover {
-        color: #000; }
+        color: #fff; }
       #menu li.active a {
         color: #fff;
-        font-weight: 500; }
+        font-weight: 400; }
 
 img {
   opacity: 0.5; }
 
 .sharebutton {
   position: absolute;
-  left: 15px;
   right: 15px;
   top: 15px;
   text-align: center;
@@ -398,18 +441,6 @@ img {
   border-radius: 25px;
   padding: .5em 1em;
   opacity: .5; }
-  @media screen and (min-width: 40em) {
-    .sharebutton {
-      width: auto;
-      right: 15px;
-      left: initial;
-      top: 15px; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
-    .sharebutton {
-      width: auto;
-      right: 15px;
-      left: initial;
-      top: 15px; } }
 
 .fp-controlArrow {
   opacity: .75;

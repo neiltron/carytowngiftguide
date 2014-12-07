@@ -5,16 +5,27 @@
 body {
   background: #fafafa;
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
-  font-weight: 200;
-  font-size: 0.8em;
-  color: #333;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-weight: 100;
+  font-size: 0.9em;
+  color: #000;
 
   @include media($medium-screen) {
     font-size: 1.05em;
   }
 
-  @include iphone6(landscape) {
-    font-size: 0.8em;
+  @include iphone5(landscape) {
+    font-size: 0.9em;
+  }
+
+  @include iphone5 {
+    -webkit-font-smoothing: antialiased;
+    font-weight: 200;
+  }
+
+  @include iphone6 {
+    -webkit-font-smoothing: antialiased;
+    font-weight: 200;
   }
 }
 
@@ -44,22 +55,29 @@ section {
 
   img.icon {
     display: block;
-    margin: 0 auto;
+    margin: 1em auto;
     height: 80px;
 
     @include media($medium-screen) {
-      margin-bottom: 60px;
+      margin-bottom: 0em;
       height: 150px;
     }
 
     @include iphone6(landscape) {
       margin-bottom: 0px;
-      margin-topssa: 0px;
+      margin-top: 0px;
       height: 70px;
     }
   }
 
   &#first {
+
+    @include iphone5 {
+      h1 {
+        font-size: 2.05em;
+      }
+    }
+
     .icon {
       margin-bottom: 10px;
       height: 60px;
@@ -68,25 +86,37 @@ section {
         margin-bottom: 60px;
         height: 150px;
       }
+
+      @include iphone6(landscape) {
+        height: 60px;
+        margin-bottom: 10px;
+      }
     }
 
     p {
       @include iphone6(landscape) {
-        margin-bottom: 10px;
-        margin-top: 5px;
+        margin-bottom: 1em;
       }
+    }
+
+    .navigate {
+      margin-top: 0;
+      padding-bottom: 6em;
     }
   }
 
   h1 {
-    font-weight: 200;
-    letter-spacing: -2px;
+    font-weight: 100;
+
     color: #fff;
   }
 
   p {
     @include span-columns(10);
     @include shift(1);
+
+    margin-top: 1em;
+    margin-bottom: 1em;
 
     @include media($medium-screen) {
       @include span-columns(6);
@@ -95,16 +125,39 @@ section {
     }
 
     @include iphone6 {
-      @include span-columns(10);
-      @include shift(1);
+      @include span-columns(11);
+      @include shift(.5);
+
+      font-size: 1.35em;
     }
 
-    margin-top: 1em;
-    margin-bottom: 1em;
+    @include iphone6(landscape) {
+      font-size: 1em;
+    }
+
+    @include iphone5 {
+      font-size: 1.15em;
+    }
   }
 
   .navigate {
     @include span-columns(12);
+
+    margin-top: 2em;
+
+    @include iphone6(landscape) {
+      margin-top: 0;
+      margin-bottom: 2em;
+    }
+  }
+
+  .slide:first-child {
+    @include iphone6(landscape) {
+      p {
+        @include span-columns(8);
+        @include shift(2);
+      }
+    }
   }
 }
 
@@ -145,6 +198,14 @@ section {
       margin: .3em;
     }
 
+    @include iphone5 {
+      font-size: .95em;
+    }
+
+    @include iphone6(landscape) {
+      font-size: .9em;
+    }
+
     .active{
       background:#666;
       background: rgba(0,0,0, 0.5);
@@ -168,12 +229,13 @@ section {
       color: #fff;
 
       a:hover{
-        color: #000;
+        color: #fff;
       }
 
       a {
         color: #fff;
-        font-weight: 500;
+
+        font-weight: 400;
       }
     }
   }
@@ -185,7 +247,6 @@ img {
 
 .sharebutton {
   position: absolute;
-  left: 15px;
   right: 15px;
   top: 15px;
   text-align: center;
@@ -197,19 +258,6 @@ img {
   padding:.5em 1em;
   opacity:.5;
 
-  @include media($medium-screen) {
-    width: auto;
-    right: 15px;
-    left: initial;
-    top: 15px;
-  }
-
-  @include iphone6(landscape) {
-    width: auto;
-    right: 15px;
-    left: initial;
-    top: 15px;
-  }
 }
 
 .fp-controlArrow {
