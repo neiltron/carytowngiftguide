@@ -200,6 +200,11 @@ section {
     top: 85%;
   }
 
+  &.wishlist {
+    top: initial;
+    bottom: 1em;
+  }
+
   li {
     display:inline-block;
     color: #000;
@@ -315,5 +320,47 @@ section {
     background:#3B5998;
     border-radius:25px;
     padding:15px;
+  }
+}
+
+form {
+  input[type='text'] {
+    padding: .5em;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 0;
+  }
+
+  p {
+    @include omega;
+
+    margin-bottom: 0;
+    font-size: 1em;
+  }
+
+  .nextlink {
+    @include span-columns(12);
+    @include omega;
+
+    z-index: 9999;
+    color: #fff;
+    font-size: 1em;
+    background: #555;
+    border-radius:25px;
+    padding:15px;
+    border:none;
+    width:250px;
+  }
+
+  .emailbutton {
+    z-index: 9999;
+    color:#fff;
+    font-size:14px;
+    background:#555;
+    border-radius:25px;
+    padding:15px;
+    border:none;
+    width:250px;
+    margin-top:20px;
   }
 }

@@ -1,285 +1,127 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Carytown Bicycle Co. | Holiday Gift Guide</title>
+    <meta name="author" content="Carytown Bicycle Co." />
+    <meta name="description" content="Carytown Bicycle Co." />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Carytown Bicycle Co. | Holiday Wish List</title>
-	<meta name="author" content="Carytown Bicycle Co." />
-	<meta name="description" content="Carytown Bicycle Co." />
-	<meta name="keywords"  content="" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
+    <ul id="menu" class='wishlist'>
+       <li data-menuanchor="home"><a href="#home">Start</a></li>
+       <li data-menuanchor="list"><a href="#list">Create Wish List</a></li>
+       <li data-menuanchor="send"><a href="#send">Send Wish List</a></li>
+    </ul>
 
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="examples.css" />
-	<link rel="stylesheet" href="assets/css/styles.css" />
+    <div data-menuanchor="share">
+        <a href="#share" class="sharebutton">Share This</a>
+    </div>
 
+    <div id="fullpage">
+        <section id="first">
+            <h1>CBC Wish List</h1>
+            <p>
+                Step 1: To make sure our helpers get the list right, start by including your name with your wish list.
+            </p>
 
-	<style>
+            <form>
+                <p>
+                    <input name="Name" value="Name" type="text">
+                </p>
 
-		/* Sections
-		 * --------------------------------------- */
-		#section0 img,
-		#section1 img{
-			margin: 0;
-		}
-		#section2 img{
-			margin: 0px 0 0 0;
-		}
-		#section3 img{
-			margin: 0px 0 0 0;
-
-		}
-		.intro p{
-
-			width: 50%;
-			margin: 0 auto;
-
-		}
-		.twitter-share-button{
-			position: absolute;
-			z-index: 99;
-			right: 149px;
-			top: 9px;
-		}
-		img {
-			opacity:.5;
-
-		}
-		.sharebutton {
-			position: absolute;
-			z-index: 10000;
-			right: 15px;
-			top: 15px;
-			color:#000;
-			background:#fff;
-			border-radius:25px;
-			padding:15px;
-			opacity:.5;
-
-		}
-				.emailbutton {
-			
-			z-index: 9999;
-			color:#fff;
-			font-size:14px;
-			background:#555;
-			border-radius:25px;
-			padding:15px;
-			border:none;
-			width:250px;
-			margin-top:20px;
-
-		}
-		.socialbuttontw {
-
-			z-index: 9999;
-			color:#fff;
-			background:#4099ff;
-			border-radius:25px;
-			padding:15px;
-			
-
-		}
-		.socialbuttonfb {
-
-			z-index: 9999;
-			color:#fff;
-			background:#3B5998;
-			border-radius:25px;
-			padding:15px;
-			
-
-		}
-		#share {
-
-			color:#fff;
-		}
-
-		.emailform {
-			
-			padding:8px;
-			border-radius:8px;
-			border:none;
-			margin-bottom:15px;
-			height:25px;
-			width:250px;
-			font-size:14px;
-		}
-
-	#list, #home, #send, #share {background:url('image/bg.png');background-repeat: repeat;}
-
-	#menu {
-		position:absolute;
-		bottom:10px;
-	}
-	.wishlist {
-		
-		max-width:50%;
-		margin:0px auto;
-
-	}
-	.nextlink {
-			z-index: 9999;
-			color:#fff;
-			font-size:14px;
-			background:#555;
-			border-radius:25px;
-			padding:15px;
-			border:none;
-			width:250px;
-			margin-top:20px;
-	}
-
-
-		
-
-	</style>
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="jquery.fullPage.js"></script>
-	<script type="text/javascript" src="examples.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['#7DAE37','#19BBB7','#EF4D36','#555'],
-				anchors: ['home','list','send','share'],
-				menu: '#menu'
-			});
-
-		});
-	</script>
-</head>
-<body>
-
-
-
-
-<ul id="menu">
-		
-		<li data-menuanchor="home" ><a  href="#home">Start</a></li>
-		<li data-menuanchor="list" ><a  href="#list">Create Wish List</a></li>
-	<li data-menuanchor="send"><a href="#send">Send Wish List</a></li>
-
-
-</ul>
-<div data-menuanchor="share"><a href="#share" class="sharebutton">Share This</a></div>
-
-<div id="fullpage">
-	
-	<div class="section" id="home">
-
-
-	<h1>CBC Wish List</h1>
-        	<p class="wishlist">Step 1: To make sure our helpers get the list right, start by including your name with your wish list.<br/><br/>
-        	
-        	<form>
-        	<input class="emailform" name="Name" value="Name" type="text"><br/><br/>
-        	
-        	
-        	<a class="nextlink" href="#list">Next Step</a>
-			
-			</form>
-
-
-	</div>
-
-	<div class="section" id="list">
-
-
-	<h1>Create Your Wishlist</h1>
-        	<p class="wishlist">Step 2: Add up to five items to your wish list. Make sure to include stocking stuffers as well as that big item you hope to see under the tree. Once done, our elves will help dispatch your items to the right people.<br/><br/>
-        	
-        	<form>
-        	<input class="emailform" name="Item" value="1." type="text"><br/>
-        	<input class="emailform" name="Item" value="2." type="text"><br/>
-        	<input class="emailform" name="Item" value="3." type="text"><br/>
-        	<input class="emailform" name="Item" value="4." type="text"><br/>
-        	<input class="emailform" name="Item" value="5." type="text"><br/>
-        	<br/>
-        	<a class="nextlink" href="#send">Next Step</a>
-			
-			</form>
-
-
-	</div>
-
-	
-
-
-
-	<div class="section" id="send">
-
-
-
-
-
-
-        <div >
-        	<h1>Share and Send Your Wish List</h1>
-        	<p>Step 3: Add up to three emails and we will have our elves will dispatch your wish list to the right people.<br/><br/><br/>
-        	
-        	<form>
-        	<input class="emailform" name="Email" value="Email" type="text"><br/>
-        	<input class="emailform" name="Email" value="Email" type="text"><br/>
-        	<input class="emailform" name="Email" value="Email" type="text"><br/>
-        	<input class="emailbutton" name="Email" value="Send My Wish List" type="submit"><br/>
-			</form>
-        	
-
-
-
-
-        
-
+                <p>
+                    <a class="nextlink" href="#list">Next Step</a>
+                </p>
+            </form>
         </section>
 
-    	</div>
+        <section>
+            <h1>Create Your Wishlist</h1>
+            <p>
+                Step 2: Add up to five items to your wish list. Make sure to include stocking stuffers as well as that big item you hope to see under the tree. Once done, our elves will help dispatch your items to the right people.
+            </p>
+
+            <form>
+                <p><input name="item1" id="item1" value="1." type="text"></p>
+                <p><input name="item2" id="item2" value="2." type="text"></p>
+                <p><input name="item3" id="item3" value="3." type="text"></p>
+                <p><input name="item4" id="item4" value="4." type="text"></p>
+                <p><input name="item5" id="item5" value="5." type="text"></p>
 
 
+                <p>
+                    <a class='nextlink' href="#send">Next Step</a>
+                </p>
+            </form>
+        </section>
 
-	</div>
+        <section>
+            <h1>Share and Send Your Wish List</h1>
 
-	<div class="section" id="share">
+            <p>
+                Step 3: Add up to three emails and we will have our elves will dispatch your wish list to the right people.
+            </p>
 
+            <form>
+                <p><input class="emailform" name="Email" value="Email" type="text"></p>
+                <p><input class="emailform" name="Email" value="Email" type="text"></p>
+                <p><input class="emailform" name="Email" value="Email" type="text"></p>
+                <p><input class="emailbutton" name="Email" value="Send My Wish List" type="submit"></p>
+            </form>
+        </section>
 
-
-
-
-
-        <div class="intro">
+        <section>
         	<h1>Share This</h1>
-        	
+
 			<p>
-        	Trying to get a few hints for your shopping list? Share the wishlist with those who have been nice this season and they can help guide you to the right present.</p><br/>
+        	   Trying to get a few hints for your shopping list? Share the wishlist with those who have been nice this season and they can help guide you to the right present.
+            </p>
 
-        	<br/>
+        	<a href="http://www.facebook.com/sharer/sharer.php?u=http://giftguide.carytownbikes.com/wishlist" target="_blank" id="fbPostLink" class="socialbutton facebook">Share on Facebook</a>
 
-
-
-
-        	<a href="http://www.facebook.com/sharer/sharer.php?u=www.carytownbikes.com/wishlist" target="_blank" id="fbPostLink" class="socialbuttonfb">Share on Facebook</a> 
-
-        	<a class="socialbuttontw" target="_blank" href="http://twitter.com/share?url=http://carytownbikes.com/wishlist&text=Fill out your wishlist with Carytown Bikes!">Share on Twitter</a>
-
+        	<a class="socialbutton twitter" target="_blank" href="http://twitter.com/share?url=http://giftguide.carytownbikes.com/wishlist&text=Fill out your wishlist with Carytown Bikes!">Share on Twitter</a>
         </section>
-
-    	</div>
-
-
 
 	</div>
 
-</div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-<script type='text/javascript' src="assets/js/jquery.tweetAction.js"></script>
-    <script type='text/javascript' src="assets/js/script.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-6440110-6');ga('send','pageview');
+    </script>
 
-</body>
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/wishlist.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>

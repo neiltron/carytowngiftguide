@@ -404,6 +404,9 @@ section {
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
     #menu {
       top: 85%; } }
+  #menu.wishlist {
+    top: initial;
+    bottom: 1em; }
   #menu li {
     display: inline-block;
     color: #000;
@@ -488,3 +491,39 @@ section {
     background: #3B5998;
     border-radius: 25px;
     padding: 15px; }
+
+form input[type='text'] {
+  padding: .5em;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 0; }
+form p {
+  margin-right: 0;
+  margin-bottom: 0;
+  font-size: 1em; }
+form .nextlink {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0;
+  z-index: 9999;
+  color: #fff;
+  font-size: 1em;
+  background: #555;
+  border-radius: 25px;
+  padding: 15px;
+  border: none;
+  width: 250px; }
+  form .nextlink:last-child {
+    margin-right: 0; }
+form .emailbutton {
+  z-index: 9999;
+  color: #fff;
+  font-size: 14px;
+  background: #555;
+  border-radius: 25px;
+  padding: 15px;
+  border: none;
+  width: 250px;
+  margin-top: 20px; }
