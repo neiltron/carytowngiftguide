@@ -475,22 +475,24 @@ section {
   display: none;
   margin-bottom: 0; }
 
-.socialbutton {
-  position: relative;
-  top: 2em;
-  font-weight: 400; }
-  .socialbutton.twitter {
+#sharelinks {
+  font-size: 1.1em; }
+  #sharelinks:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #sharelinks .socialbutton {
+    position: relative;
+    top: 2em;
+    font-weight: 400;
     z-index: 9999;
     color: #fff;
-    background: #4099ff;
     border-radius: 25px;
     padding: 15px; }
-  .socialbutton.facebook {
-    z-index: 9999;
-    color: #fff;
-    background: #3B5998;
-    border-radius: 25px;
-    padding: 15px; }
+    #sharelinks .socialbutton.twitter {
+      background-color: #4099ff; }
+    #sharelinks .socialbutton.facebook {
+      background-color: #3B5998; }
 
 form input[type='text'] {
   padding: .5em;
