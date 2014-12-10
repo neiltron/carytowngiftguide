@@ -165,6 +165,14 @@ module.exports = function (grunt) {
       }
     },
 
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**/*']
+    },
+
+
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
@@ -184,7 +192,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/*.html', '<%= config.app %>/*.html']
+        src: ['<%= config.app %>/{,*/}*.html']
       }
     },
 
@@ -210,7 +218,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/*.html'
+      html: '<%= config.app %>/{,*/}*.html'
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
@@ -309,7 +317,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'CNAME'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -413,6 +422,11 @@ module.exports = function (grunt) {
     'rev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('push', [
+    'build',
+    'gh-pages'
   ]);
 
   grunt.registerTask('default', [

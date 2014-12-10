@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "US-ASCII";
 /* Bitters 0.10.0
  * http://bitters.bourbon.io
  * Copyright 2013–2014 thoughtbot, inc.
@@ -494,7 +494,7 @@ section {
     #sharelinks .socialbutton.facebook {
       background-color: #3B5998; }
 
-form input[type='text'] {
+form input {
   padding: .5em;
   border-radius: 8px;
   border: none;
