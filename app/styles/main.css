@@ -1,4 +1,4 @@
-@charset "US-ASCII";
+@charset "UTF-8";
 /* Bitters 0.10.0
  * http://bitters.bourbon.io
  * Copyright 2013–2014 thoughtbot, inc.
@@ -6,7 +6,7 @@
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: #477dca;
+  background-color: #477DCA;
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -27,7 +27,7 @@ input[type="submit"] {
 body {
   -webkit-font-smoothing: antialiased;
   background-color: white;
-  color: #333333;
+  color: #333;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5; }
@@ -68,7 +68,7 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #477dca;
+  color: #477DCA;
   text-decoration: none; }
   a:hover {
     color: #2c5999; }
@@ -77,7 +77,7 @@ a {
     outline: none; }
 
 hr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -89,7 +89,7 @@ picture {
   max-width: 100%; }
 
 blockquote {
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #DDD;
   color: #595959;
   margin: 1.5em 0;
   padding-left: 0.75em; }
@@ -102,7 +102,7 @@ cite {
 
 fieldset {
   background: #f7f7f7;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   margin: 0 0 0.75em 0;
   padding: 1.5em; }
 
@@ -132,7 +132,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: white;
   border-radius: 3px;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
@@ -146,7 +146,7 @@ select[multiple=multiple] {
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
-    border-color: #477dca;
+    border-color: #477DCA;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
     outline: none; }
 
@@ -187,7 +187,7 @@ th {
   text-align: left; }
 
 td {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0.75em 0; }
 
 tr,
@@ -495,20 +495,24 @@ section {
       background-color: #3B5998; }
 
 form input {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   padding: .5em;
   border-radius: 8px;
   border: none;
   margin-bottom: 0; }
+  form input:last-child {
+    margin-right: 0; }
 form p {
   margin-right: 0;
   margin-bottom: 0;
   font-size: 1em; }
 form .nextlink {
-  float: left;
+  margin: 0 auto;
+  float: none;
   display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  margin-right: 0;
   z-index: 9999;
   color: #fff;
   font-size: 1em;
@@ -517,9 +521,11 @@ form .nextlink {
   padding: 15px;
   border: none;
   width: 250px; }
-  form .nextlink:last-child {
-    margin-right: 0; }
 form .emailbutton {
+  margin-right: auto !important;
+  margin: 20px auto 0;
+  float: none;
+  display: block;
   z-index: 9999;
   color: #fff;
   font-size: 14px;
@@ -527,5 +533,24 @@ form .emailbutton {
   border-radius: 25px;
   padding: 15px;
   border: none;
-  width: 250px;
-  margin-top: 20px; }
+  width: 250px; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
+  .wishlist p {
+    font-size: 1em; }
+  .wishlist .socialbutton {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
+    margin-bottom: 1em; }
+    .wishlist .socialbutton:last-child {
+      margin-right: 0; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  .wishlist p {
+    font-size: .8em; }
+  .wishlist input {
+    margin-bottom: .5em; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -326,6 +326,8 @@ section {
 
 form {
   input {
+    @include span-columns(12);
+
     padding: .5em;
     border-radius: 8px;
     border: none;
@@ -340,8 +342,9 @@ form {
   }
 
   .nextlink {
-    @include span-columns(12);
-    @include omega;
+    margin: 0 auto;
+    float: none;
+    display: block;
 
     z-index: 9999;
     color: #fff;
@@ -354,6 +357,11 @@ form {
   }
 
   .emailbutton {
+    margin-right: auto !important;
+    margin: 20px auto 0;
+    float: none;
+    display: block;
+
     z-index: 9999;
     color:#fff;
     font-size:14px;
@@ -362,6 +370,30 @@ form {
     padding:15px;
     border:none;
     width:250px;
-    margin-top:20px;
+  }
+}
+
+
+.wishlist {
+  @include iphone5 {
+    p {
+      font-size: 1em;
+    }
+
+    .socialbutton {
+      @include span-columns(10);
+      @include shift(1);
+
+      margin-bottom: 1em;
+    }
+  }
+
+  @include iphone6(landscape) {
+    p {
+      font-size: .8em;
+    }
+    input {
+      margin-bottom: .5em;
+    }
   }
 }

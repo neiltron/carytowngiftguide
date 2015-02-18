@@ -23,7 +23,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <ul id="menu" class='wishlist'>
+    <!--<ul id="menu" class='wishlist'>
        <li data-menuanchor="home"><a href="#home">Start</a></li>
        <li data-menuanchor="list"><a href="#list">Create Wish List</a></li>
        <li data-menuanchor="send"><a href="#send">Send Wish List</a></li>
@@ -31,9 +31,9 @@
 
     <div data-menuanchor="share">
         <a href="#share" class="sharebutton">Share This</a>
-    </div>
+    </div> -->
 
-    <div id="fullpage">
+    <div id="fullpage" class='wishlist'>
         <section id="first">
             <h1>CBC Wish List</h1>
             <p>
@@ -42,7 +42,7 @@
 
             <form>
                 <p>
-                    <input name="Name" value="Name" type="text">
+                    <input name="Name" value="Name" id='name_field' type="text">
                 </p>
 
                 <p>
@@ -75,10 +75,10 @@
             <h1>Share and Send Your Wish List</h1>
 
             <p>
-                Step 3: Add up to three emails and we will have our elves will dispatch your wish list to the right people.
+                Step 3: Add up to three emails and we will have our elves dispatch your wish list to the right people.
             </p>
 
-            <form>
+            <form id='send_wishlist'>
                 <p><input class="emailform" name="Email" value="Email" type="text"></p>
                 <p><input class="emailform" name="Email" value="Email" type="text"></p>
                 <p><input class="emailform" name="Email" value="Email" type="text"></p>
@@ -108,6 +108,7 @@
     <script src="../bower_components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
     <script src="../bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script src="../bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="../bower_components/mandrill-api/mandrill.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

@@ -36,8 +36,87 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
       sectionSelector: 'section',
       resize: false,
+      touchSensitivity: 30,
       sectionsColor: ['#7DAE37','#19BBB7','#EF4D36','#555'],
       anchors: ['home','list','send','share'],
       menu: '#menu'
     });
+
+  $('form').on('submit', function (e) {
+    e.preventDefault();
+  });
+
+  $('#send_wishlist').on('submit', function (e) {
+    e.preventDefault();
+
+    sendEmail();
+  });
 });
+
+
+var sendEmail = function () {
+  var m = new mandrill.Mandrill('cgQbcV7Y1OCbMlmnUWb_vQ');
+
+  var name = $('#name_field').val(),
+      emails = [];
+
+  $('.emailform').each(function(i, el) {
+    var email = $(el).val();
+
+    if (validEmail(email)) {
+      emails.push({'email': email});
+    }
+  });
+
+  var params = {
+    'template_name': 'wish-list',
+    'template_content': [],
+    'message': {
+      "merge": true,
+      "merge_language": "mailchimp",
+      "track_opens": true,
+      "track_clicks": true,
+      "auto_text": true,
+      'from_email':'bikes@carytownbikes.com',
+      'from_name':'Carytown Bicycle Co.',
+      'to': emails,
+      'subject': name + "'s Wish List",
+      'bcc_address': 'wishlist@carytownbikes.com',
+      'global_merge_vars': [
+        {
+          'name': 'name',
+          'content': name,
+        }, {
+          'name': 'item1',
+          'content': $('#item1').val(),
+        }, {
+          'name': 'item2',
+          'content': $('#item2').val(),
+        }, {
+          'name': 'item3',
+          'content': $('#item3').val(),
+        }, {
+          'name': 'item4',
+          'content': $('#item4').val(),
+        }, {
+          'name': 'item5',
+          'content': $('#item5').val()
+        }
+      ]
+    }
+  };
+
+  m.messages.sendTemplate(params, function(res) {
+    $('.emailbutton')
+      .css('background-color', '#477dca')
+      .val('Success!');
+
+  }, function(err) {
+    console.log(err);
+  });
+};
+
+
+var validEmail = function (email) {
+  return /[^\s@]+@[^\s@]+\.[^\s@]+/.test(email);
+}

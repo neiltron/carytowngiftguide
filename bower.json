@@ -6,6 +6,12 @@
     "bourbon": "3.2.3",
     "fullpage.js": "~2.5.1",
     "neat": "~1.7.0",
-    "fastclick": "~1.0.3"
+    "fastclick": "~1.0.3",
+    "mandrill-api": "~1.0.38"
+  },
+  "overrides": {
+    "mandrill-api": {
+        "main": "mandrill.js"
+    }
   }
 }
